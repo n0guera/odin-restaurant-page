@@ -1,5 +1,5 @@
+const divContent = document.querySelector('#content');
 const createHeader = () => {
-  const divContent = document.querySelector('#content');
   const headerElement = document.createElement('header');
   const navElement = document.createElement('nav');
   const unorderedList = document.createElement('ul');
@@ -20,4 +20,4 @@ const createHeader = () => {
   headerElement.appendChild(navElement);
   divContent.appendChild(headerElement);
 };
-export default createHeader;
+export { createHeader, divContent };
