@@ -1,4 +1,5 @@
-import { divContent } from './header';
+const divContent = document.createElement('div');
+divContent.setAttribute('id', 'content');
 
 const createMainContent = () => {
   const mainElement = document.createElement('main');
@@ -44,6 +45,7 @@ const createMainContent = () => {
   mainElement.appendChild(presentation);
   mainElement.appendChild(hoursTable);
   divContent.appendChild(mainElement);
+  document.body.appendChild(divContent);
 };
 
 export default createMainContent;

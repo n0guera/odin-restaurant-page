@@ -1,5 +1,5 @@
 import createFooter from './footer';
-import { createHeader } from './header';
+import createHeader from './header';
 import createMainContent from './main-content';
 import createMenuContent from './menu-tab';
 import createContactContent from './contact-tab';
