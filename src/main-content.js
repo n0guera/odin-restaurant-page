@@ -13,7 +13,7 @@ const displayMainContent = () => {
 
   const hoursTable = document.createElement('div');
 
-  const hoursTitle = document.createElement('h3');
+  const hoursTitle = document.createElement('h2');
   hoursTitle.textContent = 'Hours';
   hoursTable.appendChild(hoursTitle);
 

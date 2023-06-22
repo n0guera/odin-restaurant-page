@@ -10,7 +10,7 @@
     d.textContent =
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus qui dolor fugit facere. Corrupti ea sit quidem quod nemo rem aliquid voluptas ratione eos dolorem odio, cum animi! Nemo.';
     const o = document.createElement('div'),
-      c = document.createElement('h3');
+      c = document.createElement('h2');
     (c.textContent = 'Hours'), o.appendChild(c);
     const a = document.createElement('p');
     (a.textContent = 'Monday: 6am - 6pm'), o.appendChild(a);
@@ -18,13 +18,13 @@
     (m.textContent = 'Tuesday: 6am - 6pm'), o.appendChild(m);
     const i = document.createElement('p');
     (i.textContent = 'Wednesday: 6am - 6pm'), o.appendChild(i);
-    const u = document.createElement('p');
-    (u.textContent = 'Thursday: 6am - 10pm'), o.appendChild(u);
+    const l = document.createElement('p');
+    (l.textContent = 'Thursday: 6am - 10pm'), o.appendChild(l);
     const r = document.createElement('p');
     (r.textContent = 'Friday: 6am - 10pm'), o.appendChild(r);
-    const l = document.createElement('p');
-    (l.textContent = 'Saturday: 8am - 10pm'),
-      o.appendChild(l),
+    const u = document.createElement('p');
+    (u.textContent = 'Saturday: 8am - 10pm'),
+      o.appendChild(u),
       t.appendChild(n),
       t.appendChild(d),
       t.appendChild(o),
@@ -63,9 +63,22 @@
       const e = document.querySelector('#content');
       e.innerHTML = '';
       const t = document.createElement('h1');
-      t.setAttribute('id', 'menu-title'),
-        (t.textContent = 'Menu'),
-        e.appendChild(t);
+      t.setAttribute('id', 'menu-title'), (t.textContent = 'Menu');
+      const n = document.createElement('section');
+      n.setAttribute('id', 'menu-items');
+      const d = document.createElement('article');
+      d.setAttribute('class', 'menu-item');
+      const o = document.createElement('h2');
+      (o.textContent = 'A normal dish'), d.appendChild(o);
+      const c = document.createElement('p');
+      (c.textContent = 'Just a normal dish, nothing special here.'),
+        d.appendChild(c);
+      const a = document.createElement('p');
+      (a.textContent = '$3'),
+        d.appendChild(a),
+        e.appendChild(t),
+        e.appendChild(n),
+        n.appendChild(d);
     }),
     document.querySelector('#contact-tab').addEventListener('click', () => {});
 })();
