@@ -1,7 +1,7 @@
-const divContent = document.createElement('div');
-divContent.setAttribute('id', 'content');
+const displayMainContent = () => {
+  const divContent = document.querySelector('#content');
+  divContent.innerHTML = '';
 
-const createMainContent = () => {
   const mainElement = document.createElement('main');
 
   const h1Element = document.createElement('h1');
@@ -45,7 +45,6 @@ const createMainContent = () => {
   mainElement.appendChild(presentation);
   mainElement.appendChild(hoursTable);
   divContent.appendChild(mainElement);
-  document.body.appendChild(divContent);
 };
 
-export default createMainContent;
+export default displayMainContent;

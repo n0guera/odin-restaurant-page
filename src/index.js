@@ -1,27 +1,15 @@
 import createFooter from './footer';
 import createHeader from './header';
-import createMainContent from './main-content';
-import createMenuContent from './menu-tab';
-import createContactContent from './contact-tab';
+import displayMainContent from './main-content';
+import displayMenu from './menu-tab';
+import displayContact from './contact-tab';
 
 createHeader();
-createMainContent();
+displayMainContent();
 createFooter();
 
-const displayHome = () => {
-  createMainContent();
-};
-
-const displayMenu = () => {
-  createMenuContent();
-};
-
-const displayContact = () => {
-  createContactContent();
-};
-
 const homeTab = document.querySelector('#home-tab');
-homeTab.addEventListener('click', displayHome);
+homeTab.addEventListener('click', displayMainContent);
 
 const menuTab = document.querySelector('#menu-tab');
 menuTab.addEventListener('click', displayMenu);

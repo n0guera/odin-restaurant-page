@@ -21,5 +21,9 @@ const createHeader = () => {
   navElement.appendChild(unorderedList);
   headerElement.appendChild(navElement);
   document.body.appendChild(headerElement);
+
+  const divContentElement = document.createElement('div');
+  divContentElement.setAttribute('id', 'content');
+  document.body.appendChild(divContentElement);
 };
 export default createHeader;
