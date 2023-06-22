@@ -65,20 +65,20 @@
       const t = document.createElement('h1');
       t.setAttribute('id', 'menu-title'), (t.textContent = 'Menu');
       const n = document.createElement('section');
-      n.setAttribute('id', 'menu-items');
-      const d = document.createElement('article');
-      d.setAttribute('class', 'menu-item');
-      const o = document.createElement('h2');
-      (o.textContent = 'A normal dish'), d.appendChild(o);
-      const c = document.createElement('p');
-      (c.textContent = 'Just a normal dish, nothing special here.'),
-        d.appendChild(c);
-      const a = document.createElement('p');
-      (a.textContent = '$3'),
-        d.appendChild(a),
+      n.setAttribute('id', 'menu-items'),
+        ((e, t, d) => {
+          const o = document.createElement('article');
+          o.setAttribute('class', 'menu-item');
+          const c = document.createElement('h2');
+          (c.textContent = 'A normal dish'), o.appendChild(c);
+          const a = document.createElement('p');
+          (a.textContent = 'Just a normal dish, nothing special here.'),
+            o.appendChild(a);
+          const m = document.createElement('p');
+          (m.textContent = '$3'), o.appendChild(m), n.appendChild(o);
+        })(),
         e.appendChild(t),
-        e.appendChild(n),
-        n.appendChild(d);
+        e.appendChild(n);
     }),
     document.querySelector('#contact-tab').addEventListener('click', () => {});
 })();
