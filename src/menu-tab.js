@@ -9,21 +9,29 @@ const createMenuContent = () => {
   const menuItems = document.createElement('section');
   menuItems.setAttribute('id', 'menu-items');
 
-  const itemOne = document.createElement('article');
-  itemOne.setAttribute('class', 'menu-item');
-  const itemOneTitle = document.createElement('h2');
-  itemOneTitle.textContent = 'A normal dish';
-  itemOne.appendChild(itemOneTitle);
-  const itemOneDesc = document.createElement('p');
-  itemOneDesc.textContent = 'Just a normal dish, nothing special here.';
-  itemOne.appendChild(itemOneDesc);
-  const itemOnePrice = document.createElement('p');
-  itemOnePrice.textContent = '$3';
-  itemOne.appendChild(itemOnePrice);
+  const createMenuItem = (dishName, description, price) => {
+    const item = document.createElement('article');
+    item.setAttribute('class', 'menu-item');
+    const itemTitle = document.createElement('h2');
+    itemTitle.textContent = dishName;
+    item.appendChild(itemTitle);
+    const itemDesc = document.createElement('p');
+    itemDesc.textContent = description;
+    item.appendChild(itemDesc);
+    const itemPrice = document.createElement('p');
+    itemPrice.textContent = price;
+    item.appendChild(itemPrice);
+    menuItems.appendChild(item);
+  };
+
+  createMenuItem(
+    'A normal dish',
+    'Just a normal dish, nothing special here.',
+    '$3'
+  );
 
   divContent.appendChild(menuTitle);
   divContent.appendChild(menuItems);
-  menuItems.appendChild(itemOne);
 };
 
 export default createMenuContent;
