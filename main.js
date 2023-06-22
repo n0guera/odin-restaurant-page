@@ -18,13 +18,13 @@
     (m.textContent = 'Tuesday: 6am - 6pm'), o.appendChild(m);
     const i = document.createElement('p');
     (i.textContent = 'Wednesday: 6am - 6pm'), o.appendChild(i);
-    const l = document.createElement('p');
-    (l.textContent = 'Thursday: 6am - 10pm'), o.appendChild(l);
+    const u = document.createElement('p');
+    (u.textContent = 'Thursday: 6am - 10pm'), o.appendChild(u);
     const r = document.createElement('p');
     (r.textContent = 'Friday: 6am - 10pm'), o.appendChild(r);
-    const u = document.createElement('p');
-    (u.textContent = 'Saturday: 8am - 10pm'),
-      o.appendChild(u),
+    const l = document.createElement('p');
+    (l.textContent = 'Saturday: 8am - 10pm'),
+      o.appendChild(l),
       t.appendChild(n),
       t.appendChild(d),
       t.appendChild(o),
@@ -59,6 +59,13 @@
         document.body.appendChild(e);
     })(),
     document.querySelector('#home-tab').addEventListener('click', e),
-    document.querySelector('#menu-tab').addEventListener('click', () => {}),
+    document.querySelector('#menu-tab').addEventListener('click', () => {
+      const e = document.querySelector('#content');
+      e.innerHTML = '';
+      const t = document.createElement('h1');
+      t.setAttribute('id', 'menu-title'),
+        (t.textContent = 'Menu'),
+        e.appendChild(t);
+    }),
     document.querySelector('#contact-tab').addEventListener('click', () => {});
 })();
