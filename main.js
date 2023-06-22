@@ -1,8 +1,8 @@
 (() => {
   'use strict';
-  const e = document.createElement('div');
-  e.setAttribute('id', 'content');
-  const t = () => {
+  const e = () => {
+    const e = document.querySelector('#content');
+    e.innerHTML = '';
     const t = document.createElement('main'),
       n = document.createElement('h1');
     n.textContent = 'An Awesome Restaurant';
@@ -20,16 +20,15 @@
     (i.textContent = 'Wednesday: 6am - 6pm'), o.appendChild(i);
     const l = document.createElement('p');
     (l.textContent = 'Thursday: 6am - 10pm'), o.appendChild(l);
-    const p = document.createElement('p');
-    (p.textContent = 'Friday: 6am - 10pm'), o.appendChild(p);
+    const r = document.createElement('p');
+    (r.textContent = 'Friday: 6am - 10pm'), o.appendChild(r);
     const u = document.createElement('p');
     (u.textContent = 'Saturday: 8am - 10pm'),
       o.appendChild(u),
       t.appendChild(n),
       t.appendChild(d),
       t.appendChild(o),
-      e.appendChild(t),
-      document.body.appendChild(e);
+      e.appendChild(t);
   };
   (() => {
     const e = document.createElement('header'),
@@ -48,8 +47,10 @@
       t.appendChild(n),
       e.appendChild(t),
       document.body.appendChild(e);
+    const a = document.createElement('div');
+    a.setAttribute('id', 'content'), document.body.appendChild(a);
   })(),
-    t(),
+    e(),
     (() => {
       const e = document.createElement('footer'),
         t = document.createElement('p');
@@ -57,9 +58,7 @@
         e.appendChild(t),
         document.body.appendChild(e);
     })(),
-    document.querySelector('#home-tab').addEventListener('click', () => {
-      t();
-    }),
+    document.querySelector('#home-tab').addEventListener('click', e),
     document.querySelector('#menu-tab').addEventListener('click', () => {}),
     document.querySelector('#contact-tab').addEventListener('click', () => {});
 })();
