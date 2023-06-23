@@ -22,9 +22,9 @@
     (l.textContent = 'Thursday: 6am - 10pm'), d.appendChild(l);
     const r = document.createElement('p');
     (r.textContent = 'Friday: 6am - 10pm'), d.appendChild(r);
-    const u = document.createElement('p');
-    (u.textContent = 'Saturday: 8am - 10pm'),
-      d.appendChild(u),
+    const p = document.createElement('p');
+    (p.textContent = 'Saturday: 8am - 10pm'),
+      d.appendChild(p),
       t.appendChild(n),
       t.appendChild(o),
       t.appendChild(d),
@@ -86,6 +86,15 @@
       const e = document.querySelector('#content');
       e.innerHTML = '';
       const t = document.createElement('h1');
-      (t.textContent = 'Contact Us'), e.appendChild(t);
+      t.textContent = 'Contact Us';
+      const n = document.createElement('address');
+      n.setAttribute('id', 'contact-card');
+      const o = document.createElement('p');
+      (o.textContent = 'Amazing Owner'), n.appendChild(o);
+      const d = document.createElement('p');
+      (d.textContent = 'amazingownerrealemail@amazingmail.com'),
+        n.appendChild(d),
+        e.appendChild(t),
+        e.appendChild(n);
     });
 })();

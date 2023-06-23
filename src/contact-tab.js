@@ -5,7 +5,19 @@ const createContactContent = () => {
   const contactTitle = document.createElement('h1');
   contactTitle.textContent = 'Contact Us';
 
+  const contactCard = document.createElement('address');
+  contactCard.setAttribute('id', 'contact-card');
+
+  const contactName = document.createElement('p');
+  contactName.textContent = 'Amazing Owner';
+  contactCard.appendChild(contactName);
+
+  const contactEmail = document.createElement('p');
+  contactEmail.textContent = 'amazingownerrealemail@amazingmail.com';
+  contactCard.appendChild(contactEmail);
+
   divContent.appendChild(contactTitle);
+  divContent.appendChild(contactCard);
 };
 
 export default createContactContent;
