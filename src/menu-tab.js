@@ -25,10 +25,14 @@ const createMenuContent = () => {
   };
 
   createMenuItem(
-    'A normal dish',
-    'Just a normal dish, nothing special here.',
-    '$3'
+    'A normal salad',
+    'Just a normal salad, nothing special here.',
+    '$2'
   );
+
+  createMenuItem('Sandwich', "Hey, it's a sandwich", '$3');
+
+  createMenuItem('An amazing Pepperoni Pizza', "Look! It's amazing!", '$5');
 
   divContent.appendChild(menuTitle);
   divContent.appendChild(menuItems);

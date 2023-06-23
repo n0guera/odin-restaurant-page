@@ -65,18 +65,20 @@
       const t = document.createElement('h1');
       t.setAttribute('id', 'menu-title'), (t.textContent = 'Menu');
       const n = document.createElement('section');
-      n.setAttribute('id', 'menu-items'),
-        ((e, t, o) => {
-          const d = document.createElement('article');
-          d.setAttribute('class', 'menu-item');
-          const c = document.createElement('h2');
-          (c.textContent = 'A normal dish'), d.appendChild(c);
-          const a = document.createElement('p');
-          (a.textContent = 'Just a normal dish, nothing special here.'),
-            d.appendChild(a);
-          const m = document.createElement('p');
-          (m.textContent = '$3'), d.appendChild(m), n.appendChild(d);
-        })(),
+      n.setAttribute('id', 'menu-items');
+      const o = (e, t, o) => {
+        const d = document.createElement('article');
+        d.setAttribute('class', 'menu-item');
+        const c = document.createElement('h2');
+        (c.textContent = e), d.appendChild(c);
+        const a = document.createElement('p');
+        (a.textContent = t), d.appendChild(a);
+        const m = document.createElement('p');
+        (m.textContent = o), d.appendChild(m), n.appendChild(d);
+      };
+      o('A normal salad', 'Just a normal salad, nothing special here.', '$2'),
+        o('Sandwich', "Hey, it's a sandwich", '$3'),
+        o('An amazing Pepperoni Pizza', "Look! It's amazing!", '$5'),
         e.appendChild(t),
         e.appendChild(n);
     }),
