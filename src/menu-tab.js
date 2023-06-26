@@ -36,9 +36,19 @@ const createMenuContent = () => {
     '/src/img/normal-salad.jpg'
   );
 
-  createMenuItem('Sandwich', "Hey, it's a sandwich", '$3');
+  createMenuItem(
+    'Sandwich',
+    "Hey, it's a sandwich",
+    '$3',
+    '/src/img/sandwich.jpg'
+  );
 
-  createMenuItem('An amazing Pepperoni Pizza', "Look! It's amazing!", '$5');
+  createMenuItem(
+    'An amazing Pepperoni Pizza',
+    "Look! It's amazing!",
+    '$5',
+    '/src/img/pizza.jpg'
+  );
 
   divContent.appendChild(menuTitle);
   divContent.appendChild(menuItems);
