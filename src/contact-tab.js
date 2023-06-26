@@ -16,6 +16,12 @@ const createContactContent = () => {
   contactEmail.textContent = 'amazingownerrealemail@amazingmail.com';
   contactCard.appendChild(contactEmail);
 
+  const contactImage = document.createElement('img');
+  contactImage.setAttribute('src', '/src/img/amazing-owner.jpg');
+  contactImage.setAttribute('alt', 'Amazing owner');
+  contactImage.setAttribute('id', 'contact-image');
+  contactCard.appendChild(contactImage);
+
   divContent.appendChild(contactTitle);
   divContent.appendChild(contactCard);
 };
