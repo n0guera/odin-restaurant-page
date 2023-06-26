@@ -9,7 +9,7 @@ const createMenuContent = () => {
   const menuItems = document.createElement('section');
   menuItems.setAttribute('id', 'menu-items');
 
-  const createMenuItem = (dishName, description, price) => {
+  const createMenuItem = (dishName, description, price, imgDir) => {
     const item = document.createElement('article');
     item.setAttribute('class', 'menu-item');
     const itemTitle = document.createElement('h2');
@@ -21,13 +21,19 @@ const createMenuContent = () => {
     const itemPrice = document.createElement('p');
     itemPrice.textContent = price;
     item.appendChild(itemPrice);
+    const itemImg = document.createElement('img');
+    itemImg.setAttribute('src', imgDir);
+    itemImg.setAttribute('alt', `${dishName}`);
+    itemImg.classList.add('item-img');
+    item.appendChild(itemImg);
     menuItems.appendChild(item);
   };
 
   createMenuItem(
     'A normal salad',
     'Just a normal salad, nothing special here.',
-    '$2'
+    '$2',
+    '/src/img/normal-salad.jpg'
   );
 
   createMenuItem('Sandwich', "Hey, it's a sandwich", '$3');

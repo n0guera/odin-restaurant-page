@@ -6,43 +6,43 @@
     const t = document.createElement('main'),
       n = document.createElement('h1');
     n.textContent = 'An Awesome Restaurant';
-    const o = document.createElement('p');
-    o.textContent =
+    const d = document.createElement('p');
+    d.textContent =
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus qui dolor fugit facere. Corrupti ea sit quidem quod nemo rem aliquid voluptas ratione eos dolorem odio, cum animi! Nemo.';
-    const d = document.createElement('div'),
+    const o = document.createElement('div'),
       c = document.createElement('h2');
-    (c.textContent = 'Hours'), d.appendChild(c);
+    (c.textContent = 'Hours'), o.appendChild(c);
     const a = document.createElement('p');
-    (a.textContent = 'Monday: 6am - 6pm'), d.appendChild(a);
+    (a.textContent = 'Monday: 6am - 6pm'), o.appendChild(a);
     const m = document.createElement('p');
-    (m.textContent = 'Tuesday: 6am - 6pm'), d.appendChild(m);
+    (m.textContent = 'Tuesday: 6am - 6pm'), o.appendChild(m);
     const i = document.createElement('p');
-    (i.textContent = 'Wednesday: 6am - 6pm'), d.appendChild(i);
+    (i.textContent = 'Wednesday: 6am - 6pm'), o.appendChild(i);
     const l = document.createElement('p');
-    (l.textContent = 'Thursday: 6am - 10pm'), d.appendChild(l);
+    (l.textContent = 'Thursday: 6am - 10pm'), o.appendChild(l);
     const r = document.createElement('p');
-    (r.textContent = 'Friday: 6am - 10pm'), d.appendChild(r);
+    (r.textContent = 'Friday: 6am - 10pm'), o.appendChild(r);
     const p = document.createElement('p');
     (p.textContent = 'Saturday: 8am - 10pm'),
-      d.appendChild(p),
+      o.appendChild(p),
       t.appendChild(n),
-      t.appendChild(o),
       t.appendChild(d),
+      t.appendChild(o),
       e.appendChild(t);
   };
   (() => {
     const e = document.createElement('header'),
       t = document.createElement('nav'),
       n = document.createElement('ul'),
-      o = document.createElement('li');
-    o.setAttribute('id', 'home-tab'), (o.textContent = 'Home');
-    const d = document.createElement('li');
-    d.setAttribute('id', 'menu-tab'), (d.textContent = 'Menu');
+      d = document.createElement('li');
+    d.setAttribute('id', 'home-tab'), (d.textContent = 'Home');
+    const o = document.createElement('li');
+    o.setAttribute('id', 'menu-tab'), (o.textContent = 'Menu');
     const c = document.createElement('li');
     c.setAttribute('id', 'contact-tab'),
       (c.textContent = 'Contact'),
-      n.appendChild(o),
       n.appendChild(d),
+      n.appendChild(o),
       n.appendChild(c),
       t.appendChild(n),
       e.appendChild(t),
@@ -66,19 +66,30 @@
       t.setAttribute('id', 'menu-title'), (t.textContent = 'Menu');
       const n = document.createElement('section');
       n.setAttribute('id', 'menu-items');
-      const o = (e, t, o) => {
-        const d = document.createElement('article');
-        d.setAttribute('class', 'menu-item');
-        const c = document.createElement('h2');
-        (c.textContent = e), d.appendChild(c);
-        const a = document.createElement('p');
-        (a.textContent = t), d.appendChild(a);
+      const d = (e, t, d, o) => {
+        const c = document.createElement('article');
+        c.setAttribute('class', 'menu-item');
+        const a = document.createElement('h2');
+        (a.textContent = e), c.appendChild(a);
         const m = document.createElement('p');
-        (m.textContent = o), d.appendChild(m), n.appendChild(d);
+        (m.textContent = t), c.appendChild(m);
+        const i = document.createElement('p');
+        (i.textContent = d), c.appendChild(i);
+        const l = document.createElement('img');
+        l.setAttribute('src', o),
+          l.setAttribute('alt', `${e}`),
+          l.classList.add('item-img'),
+          c.appendChild(l),
+          n.appendChild(c);
       };
-      o('A normal salad', 'Just a normal salad, nothing special here.', '$2'),
-        o('Sandwich', "Hey, it's a sandwich", '$3'),
-        o('An amazing Pepperoni Pizza', "Look! It's amazing!", '$5'),
+      d(
+        'A normal salad',
+        'Just a normal salad, nothing special here.',
+        '$2',
+        '/src/img/normal-salad.jpg'
+      ),
+        d('Sandwich', "Hey, it's a sandwich", '$3'),
+        d('An amazing Pepperoni Pizza', "Look! It's amazing!", '$5'),
         e.appendChild(t),
         e.appendChild(n);
     }),
@@ -89,11 +100,11 @@
       t.textContent = 'Contact Us';
       const n = document.createElement('address');
       n.setAttribute('id', 'contact-card');
-      const o = document.createElement('p');
-      (o.textContent = 'Amazing Owner'), n.appendChild(o);
       const d = document.createElement('p');
-      (d.textContent = 'amazingownerrealemail@amazingmail.com'),
-        n.appendChild(d),
+      (d.textContent = 'Amazing Owner'), n.appendChild(d);
+      const o = document.createElement('p');
+      (o.textContent = 'amazingownerrealemail@amazingmail.com'),
+        n.appendChild(o),
         e.appendChild(t),
         e.appendChild(n);
     });
