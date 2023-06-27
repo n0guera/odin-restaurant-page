@@ -17,7 +17,7 @@ const createContactContent = () => {
   contactCard.appendChild(contactEmail);
 
   const contactImage = document.createElement('img');
-  contactImage.setAttribute('src', '/src/img/amazing-owner.jpg');
+  contactImage.setAttribute('src', '../src/img/amazing-owner.jpg');
   contactImage.setAttribute('alt', 'Amazing owner');
   contactImage.setAttribute('id', 'contact-image');
   contactCard.appendChild(contactImage);

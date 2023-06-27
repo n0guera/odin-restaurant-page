@@ -37,7 +37,7 @@ const createMenuContent = () => {
     'A normal salad',
     'Just a normal salad, nothing special here.',
     '$2',
-    '/src/img/normal-salad.jpg',
+    '../src/img/normal-salad.jpg',
     'Photo by Chan Walrus on Pexels'
   );
 
@@ -45,7 +45,7 @@ const createMenuContent = () => {
     'Sandwich',
     "Hey, it's a sandwich",
     '$3',
-    '/src/img/sandwich.jpg',
+    '../src/img/sandwich.jpg',
     'Photo by Gonzalo Acuña on Pexels'
   );
 
@@ -53,7 +53,7 @@ const createMenuContent = () => {
     'An amazing Pepperoni Pizza',
     "Look! It's amazing!",
     '$5',
-    '/src/img/pizza.jpg',
+    '../src/img/pizza.jpg',
     'Photo by Natan Machado on Pexels'
   );
 
