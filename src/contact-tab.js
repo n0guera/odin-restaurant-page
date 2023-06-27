@@ -22,6 +22,10 @@ const createContactContent = () => {
   contactImage.setAttribute('id', 'contact-image');
   contactCard.appendChild(contactImage);
 
+  const contactImageCredits = document.createElement('p');
+  contactImageCredits.textContent = 'Photo by Rahul Pandit on Pexels';
+  contactCard.appendChild(contactImageCredits);
+
   divContent.appendChild(contactTitle);
   divContent.appendChild(contactCard);
 };
