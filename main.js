@@ -87,21 +87,21 @@
         'A normal salad',
         'Just a normal salad, nothing special here.',
         '$2',
-        '/src/img/normal-salad.jpg',
+        '../src/img/normal-salad.jpg',
         'Photo by Chan Walrus on Pexels'
       ),
         o(
           'Sandwich',
           "Hey, it's a sandwich",
           '$3',
-          '/src/img/sandwich.jpg',
+          '../src/img/sandwich.jpg',
           'Photo by Gonzalo Acuña on Pexels'
         ),
         o(
           'An amazing Pepperoni Pizza',
           "Look! It's amazing!",
           '$5',
-          '/src/img/pizza.jpg',
+          '../src/img/pizza.jpg',
           'Photo by Natan Machado on Pexels'
         ),
         e.appendChild(t),
@@ -120,7 +120,7 @@
       (c.textContent = 'amazingownerrealemail@amazingmail.com'),
         n.appendChild(c);
       const a = document.createElement('img');
-      a.setAttribute('src', '/src/img/amazing-owner.jpg'),
+      a.setAttribute('src', '../src/img/amazing-owner.jpg'),
         a.setAttribute('alt', 'Amazing owner'),
         a.setAttribute('id', 'contact-image'),
         n.appendChild(a);
