@@ -3,11 +3,17 @@
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   font-size: 20px;
+  color: #efd8a1;
+  background-color: #45230d;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #724113;
+  margin-bottom: 32px;
 }
 
 ul {
@@ -26,7 +32,11 @@ ul > li {
 #content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  background-color: #724113;
+  width: 50vw;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 .item-img {
@@ -37,4 +47,11 @@ ul > li {
 #contact-image {
   width: 300px;
   height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #724113;
+  margin-top: 32px;
 }
