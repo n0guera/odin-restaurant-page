@@ -1,3 +1,7 @@
+import saladPic from './img/normal-salad.jpg';
+import sandwichPic from './img/sandwich.jpg';
+import pizzaPic from './img/pizza.jpg';
+
 const createMenuContent = () => {
   const divContent = document.querySelector('#content');
   divContent.innerHTML = '';
@@ -21,8 +25,8 @@ const createMenuContent = () => {
     const itemPrice = document.createElement('p');
     itemPrice.textContent = price;
     item.appendChild(itemPrice);
-    const itemImg = document.createElement('img');
-    itemImg.setAttribute('src', imgDir);
+    const itemImg = new Image();
+    itemImg.src = imgDir;
     itemImg.setAttribute('alt', `${dishName}`);
     itemImg.classList.add('item-img');
     item.appendChild(itemImg);
@@ -37,7 +41,7 @@ const createMenuContent = () => {
     'A normal salad',
     'Just a normal salad, nothing special here.',
     '$2',
-    '../src/img/normal-salad.jpg',
+    saladPic,
     'Photo by Chan Walrus on Pexels'
   );
 
@@ -45,7 +49,7 @@ const createMenuContent = () => {
     'Sandwich',
     "Hey, it's a sandwich",
     '$3',
-    '../src/img/sandwich.jpg',
+    sandwichPic,
     'Photo by Gonzalo Acuña on Pexels'
   );
 
@@ -53,7 +57,7 @@ const createMenuContent = () => {
     'An amazing Pepperoni Pizza',
     "Look! It's amazing!",
     '$5',
-    '../src/img/pizza.jpg',
+    pizzaPic,
     'Photo by Natan Machado on Pexels'
   );
 

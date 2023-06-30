@@ -1,3 +1,5 @@
+import ownerImage from './img/amazing-owner.jpg';
+
 const createContactContent = () => {
   const divContent = document.querySelector('#content');
   divContent.innerHTML = '';
@@ -16,8 +18,8 @@ const createContactContent = () => {
   contactEmail.textContent = 'amazingownerrealemail@amazingmail.com';
   contactCard.appendChild(contactEmail);
 
-  const contactImage = document.createElement('img');
-  contactImage.setAttribute('src', '../src/img/amazing-owner.jpg');
+  const contactImage = new Image();
+  contactImage.src = ownerImage;
   contactImage.setAttribute('alt', 'Amazing owner');
   contactImage.setAttribute('id', 'contact-image');
   contactCard.appendChild(contactImage);
