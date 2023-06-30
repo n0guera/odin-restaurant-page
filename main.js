@@ -1,35 +1,66 @@
 (() => {
   'use strict';
-  const e = () => {
-    const e = document.querySelector('#content');
-    e.innerHTML = '';
-    const t = document.createElement('main'),
-      n = document.createElement('h1');
-    n.textContent = 'An Awesome Restaurant';
-    const o = document.createElement('p');
-    o.textContent =
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus qui dolor fugit facere. Corrupti ea sit quidem quod nemo rem aliquid voluptas ratione eos dolorem odio, cum animi! Nemo.';
-    const c = document.createElement('div'),
-      a = document.createElement('h2');
-    (a.textContent = 'Hours'), c.appendChild(a);
-    const d = document.createElement('p');
-    (d.textContent = 'Monday: 6am - 6pm'), c.appendChild(d);
-    const m = document.createElement('p');
-    (m.textContent = 'Tuesday: 6am - 6pm'), c.appendChild(m);
-    const i = document.createElement('p');
-    (i.textContent = 'Wednesday: 6am - 6pm'), c.appendChild(i);
-    const l = document.createElement('p');
-    (l.textContent = 'Thursday: 6am - 10pm'), c.appendChild(l);
-    const r = document.createElement('p');
-    (r.textContent = 'Friday: 6am - 10pm'), c.appendChild(r);
-    const p = document.createElement('p');
-    (p.textContent = 'Saturday: 8am - 10pm'),
-      c.appendChild(p),
-      t.appendChild(n),
-      t.appendChild(o),
-      t.appendChild(c),
-      e.appendChild(t);
-  };
+  var e = {};
+  (e.g = (function () {
+    if ('object' == typeof globalThis) return globalThis;
+    try {
+      return this || new Function('return this')();
+    } catch (e) {
+      if ('object' == typeof window) return window;
+    }
+  })()),
+    (() => {
+      var t;
+      e.g.importScripts && (t = e.g.location + '');
+      var n = e.g.document;
+      if (!t && n && (n.currentScript && (t = n.currentScript.src), !t)) {
+        var o = n.getElementsByTagName('script');
+        if (o.length) for (var c = o.length - 1; c > -1 && !t; ) t = o[c--].src;
+      }
+      if (!t)
+        throw new Error(
+          'Automatic publicPath is not supported in this browser'
+        );
+      (t = t
+        .replace(/#.*$/, '')
+        .replace(/\?.*$/, '')
+        .replace(/\/[^\/]+$/, '/')),
+        (e.p = t);
+    })();
+  const t = () => {
+      const e = document.querySelector('#content');
+      e.innerHTML = '';
+      const t = document.createElement('main'),
+        n = document.createElement('h1');
+      n.textContent = 'An Awesome Restaurant';
+      const o = document.createElement('p');
+      o.textContent =
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus qui dolor fugit facere. Corrupti ea sit quidem quod nemo rem aliquid voluptas ratione eos dolorem odio, cum animi! Nemo.';
+      const c = document.createElement('div'),
+        a = document.createElement('h2');
+      (a.textContent = 'Hours'), c.appendChild(a);
+      const d = document.createElement('p');
+      (d.textContent = 'Monday: 6am - 6pm'), c.appendChild(d);
+      const i = document.createElement('p');
+      (i.textContent = 'Tuesday: 6am - 6pm'), c.appendChild(i);
+      const r = document.createElement('p');
+      (r.textContent = 'Wednesday: 6am - 6pm'), c.appendChild(r);
+      const m = document.createElement('p');
+      (m.textContent = 'Thursday: 6am - 10pm'), c.appendChild(m);
+      const l = document.createElement('p');
+      (l.textContent = 'Friday: 6am - 10pm'), c.appendChild(l);
+      const p = document.createElement('p');
+      (p.textContent = 'Saturday: 8am - 10pm'),
+        c.appendChild(p),
+        t.appendChild(n),
+        t.appendChild(o),
+        t.appendChild(c),
+        e.appendChild(t);
+    },
+    n = e.p + '34273cfebe65c7377678.jpg',
+    o = e.p + '1ceceee462b6347e2720.jpg',
+    c = e.p + 'a94f68e18b8471baed46.jpg',
+    a = e.p + 'bc5e681d0dcaeb50c6de.jpg';
   (() => {
     const e = document.createElement('header'),
       t = document.createElement('nav'),
@@ -50,7 +81,7 @@
     const d = document.createElement('div');
     d.setAttribute('id', 'content'), document.body.appendChild(d);
   })(),
-    e(),
+    t(),
     (() => {
       const e = document.createElement('footer'),
         t = document.createElement('p');
@@ -58,54 +89,54 @@
         e.appendChild(t),
         document.body.appendChild(e);
     })(),
-    document.querySelector('#home-tab').addEventListener('click', e),
+    document.querySelector('#home-tab').addEventListener('click', t),
     document.querySelector('#menu-tab').addEventListener('click', () => {
       const e = document.querySelector('#content');
       e.innerHTML = '';
       const t = document.createElement('h1');
       t.setAttribute('id', 'menu-title'), (t.textContent = 'Menu');
-      const n = document.createElement('section');
-      n.setAttribute('id', 'menu-items');
-      const o = (e, t, o, c, a) => {
+      const a = document.createElement('section');
+      a.setAttribute('id', 'menu-items');
+      const d = (e, t, n, o, c) => {
         const d = document.createElement('article');
         d.setAttribute('class', 'menu-item');
-        const m = document.createElement('h2');
-        (m.textContent = e), d.appendChild(m);
-        const i = document.createElement('p');
-        (i.textContent = t), d.appendChild(i);
-        const l = document.createElement('p');
-        (l.textContent = o), d.appendChild(l);
-        const r = document.createElement('img');
-        r.setAttribute('src', c),
-          r.setAttribute('alt', `${e}`),
-          r.classList.add('item-img'),
-          d.appendChild(r);
+        const i = document.createElement('h2');
+        (i.textContent = e), d.appendChild(i);
+        const r = document.createElement('p');
+        (r.textContent = t), d.appendChild(r);
+        const m = document.createElement('p');
+        (m.textContent = n), d.appendChild(m);
+        const l = new Image();
+        (l.src = o),
+          l.setAttribute('alt', `${e}`),
+          l.classList.add('item-img'),
+          d.appendChild(l);
         const p = document.createElement('p');
-        (p.textContent = a), d.appendChild(p), n.appendChild(d);
+        (p.textContent = c), d.appendChild(p), a.appendChild(d);
       };
-      o(
+      d(
         'A normal salad',
         'Just a normal salad, nothing special here.',
         '$2',
-        '../src/img/normal-salad.jpg',
+        n,
         'Photo by Chan Walrus on Pexels'
       ),
-        o(
+        d(
           'Sandwich',
           "Hey, it's a sandwich",
           '$3',
-          '../src/img/sandwich.jpg',
+          o,
           'Photo by Gonzalo Acuña on Pexels'
         ),
-        o(
+        d(
           'An amazing Pepperoni Pizza',
           "Look! It's amazing!",
           '$5',
-          '../src/img/pizza.jpg',
+          c,
           'Photo by Natan Machado on Pexels'
         ),
         e.appendChild(t),
-        e.appendChild(n);
+        e.appendChild(a);
     }),
     document.querySelector('#contact-tab').addEventListener('click', () => {
       const e = document.querySelector('#content');
@@ -119,14 +150,14 @@
       const c = document.createElement('p');
       (c.textContent = 'amazingownerrealemail@amazingmail.com'),
         n.appendChild(c);
-      const a = document.createElement('img');
-      a.setAttribute('src', '../src/img/amazing-owner.jpg'),
-        a.setAttribute('alt', 'Amazing owner'),
-        a.setAttribute('id', 'contact-image'),
-        n.appendChild(a);
-      const d = document.createElement('p');
-      (d.textContent = 'Photo by Rahul Pandit on Pexels'),
-        n.appendChild(d),
+      const d = new Image();
+      (d.src = a),
+        d.setAttribute('alt', 'Amazing owner'),
+        d.setAttribute('id', 'contact-image'),
+        n.appendChild(d);
+      const i = document.createElement('p');
+      (i.textContent = 'Photo by Rahul Pandit on Pexels'),
+        n.appendChild(i),
         e.appendChild(t),
         e.appendChild(n);
     });
